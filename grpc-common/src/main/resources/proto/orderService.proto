@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.yang.grpc.common.orderService";
+option java_outer_classname = "orderService";
+
+
+service OrderServiceImpl {
+  // Sends a greeting
+  rpc orderDetail (OrderRequest) returns (OrderResponse) {
+  }
+}
+
+message OrderRequest {
+  string name = 1;
+}
+
+message OrderResponse {
+  string message = 1;
+}
